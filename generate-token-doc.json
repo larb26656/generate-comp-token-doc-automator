@@ -1,0 +1,443 @@
+{
+  "id": "lwvmel3wb3kfhu2giqg",
+  "name": "generate-token-doc",
+  "description": "",
+  "color": "red",
+  "actions": [
+    {
+      "id": "lwvrw6ybxgdi0lol94h",
+      "command": {
+        "name": "getCurrentSelection",
+        "metadata": {},
+        "title": "",
+        "description": ""
+      },
+      "actions": [
+        {
+          "id": "lwvs13cgjpm7bsutph",
+          "command": {
+            "name": "setVariable",
+            "metadata": { "key": "setting", "value": "{{this.characters}}" },
+            "title": "",
+            "description": ""
+          },
+          "actions": []
+        },
+        {
+          "id": "lwvvlm99rwvqh8cr5a",
+          "command": {
+            "name": "createFrame",
+            "metadata": { "layerName": "{{setting.component}} Docs" },
+            "title": "",
+            "description": ""
+          },
+          "actions": [
+            {
+              "id": "lwvvnpqchwb0joc9mdn",
+              "command": {
+                "name": "createText",
+                "metadata": {
+                  "fontFamily": "Inter",
+                  "fontStyle": "Regular",
+                  "textAlignHorizontal": "LEFT",
+                  "textAlignVertical": "CENTER",
+                  "textDecoration": "NONE",
+                  "textCase": "ORIGINAL",
+                  "textAutoResize": "WIDTH_AND_HEIGHT",
+                  "characters": "{{setting.component}}"
+                },
+                "title": "",
+                "description": ""
+              },
+              "actions": []
+            },
+            {
+              "id": "lwvvlm9a9e3gadft9pv",
+              "command": {
+                "name": "setAutoLayout",
+                "metadata": {
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 10,
+                  "horizontalSizingMode": "AUTO",
+                  "verticalSizingMode": "AUTO",
+                  "horizontalAlignItems": "MIN",
+                  "verticalAlignItems": "MIN",
+                  "alignment": "PACKED",
+                  "paddingLeft": 10,
+                  "paddingRight": 10,
+                  "paddingTop": 10,
+                  "paddingBottom": 10
+                },
+                "title": "",
+                "description": ""
+              },
+              "actions": []
+            },
+            {
+              "id": "lwvvz8mw59afqhy23v",
+              "command": {
+                "name": "setSelection",
+                "metadata": {},
+                "title": "",
+                "description": ""
+              },
+              "actions": []
+            },
+            {
+              "id": "lwvw92558aaxfhifn23",
+              "command": {
+                "name": "getCurrentSelection",
+                "metadata": {},
+                "title": "",
+                "description": ""
+              },
+              "actions": [
+                {
+                  "id": "lwvwap7bvrvj8sdmnn",
+                  "command": {
+                    "name": "setVariable",
+                    "metadata": {
+                      "key": "mainFrameId",
+                      "value": "{{this.id}}"
+                    },
+                    "title": "",
+                    "description": ""
+                  },
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "id": "lwvwd3bc2xuzbdw6266",
+              "command": {
+                "name": "removeFromSelection",
+                "metadata": {},
+                "title": "",
+                "description": ""
+              },
+              "actions": []
+            },
+            {
+              "id": "lwvvrhijnqoybt04dyl",
+              "command": {
+                "name": "forEach",
+                "metadata": { "array": "{{setting.docs}}" },
+                "title": "",
+                "description": ""
+              },
+              "actions": [
+                {
+                  "id": "lwvv87z1ziea3j3ris",
+                  "command": {
+                    "name": "createFrame",
+                    "metadata": { "layerName": "{{item.title}}" },
+                    "title": "",
+                    "description": ""
+                  },
+                  "actions": [
+                    {
+                      "id": "lwvvicilwyxsjz7thx",
+                      "command": {
+                        "name": "setAutoLayout",
+                        "metadata": {
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 10,
+                          "horizontalSizingMode": "AUTO",
+                          "verticalSizingMode": "AUTO",
+                          "horizontalAlignItems": "MIN",
+                          "verticalAlignItems": "MIN",
+                          "alignment": "PACKED",
+                          "paddingLeft": 10,
+                          "paddingRight": 10,
+                          "paddingTop": 10,
+                          "paddingBottom": 10
+                        },
+                        "title": "",
+                        "description": ""
+                      },
+                      "actions": []
+                    },
+                    {
+                      "id": "lwvviif06fu6vg99yfp",
+                      "command": {
+                        "name": "createText",
+                        "metadata": {
+                          "fontFamily": "Inter",
+                          "fontStyle": "Regular",
+                          "textAlignHorizontal": "LEFT",
+                          "textAlignVertical": "CENTER",
+                          "textDecoration": "NONE",
+                          "textCase": "ORIGINAL",
+                          "textAutoResize": "WIDTH_AND_HEIGHT",
+                          "characters": "{{item.title}}"
+                        },
+                        "title": "",
+                        "description": ""
+                      },
+                      "actions": []
+                    },
+                    {
+                      "id": "lwvvj0q0eahoemlj5h7",
+                      "command": {
+                        "name": "createFrame",
+                        "metadata": { "layerName": "Content" },
+                        "title": "",
+                        "description": ""
+                      },
+                      "actions": [
+                        {
+                          "id": "lwvvj8merq6q5y99m9r",
+                          "command": {
+                            "name": "setAutoLayout",
+                            "metadata": {
+                              "layoutMode": "HORIZONTAL",
+                              "itemSpacing": 10,
+                              "horizontalSizingMode": "AUTO",
+                              "verticalSizingMode": "AUTO",
+                              "horizontalAlignItems": "MIN",
+                              "verticalAlignItems": "MIN",
+                              "alignment": "PACKED",
+                              "paddingLeft": 10,
+                              "paddingRight": 10,
+                              "paddingTop": 10,
+                              "paddingBottom": 10
+                            },
+                            "title": "",
+                            "description": ""
+                          },
+                          "actions": []
+                        },
+                        {
+                          "id": "lwvvhpdd5tg9mrt7vmc",
+                          "command": {
+                            "name": "createFrame",
+                            "metadata": { "layerName": "Component" },
+                            "title": "",
+                            "description": ""
+                          },
+                          "actions": [
+                            {
+                              "id": "lwvvjmxm8zj7734rzby",
+                              "command": {
+                                "name": "setAutoLayout",
+                                "metadata": {
+                                  "layoutMode": "HORIZONTAL",
+                                  "itemSpacing": 10,
+                                  "horizontalSizingMode": "AUTO",
+                                  "verticalSizingMode": "AUTO",
+                                  "horizontalAlignItems": "MIN",
+                                  "verticalAlignItems": "MIN",
+                                  "alignment": "PACKED",
+                                  "paddingLeft": 10,
+                                  "paddingRight": 10,
+                                  "paddingTop": 10,
+                                  "paddingBottom": 10
+                                },
+                                "title": "",
+                                "description": ""
+                              },
+                              "actions": []
+                            },
+                            {
+                              "id": "lwvvaubv5y282ffoomb",
+                              "command": {
+                                "name": "createInstance",
+                                "metadata": { "name": "{{setting.component}}" },
+                                "title": "",
+                                "description": ""
+                              },
+                              "actions": [
+                                {
+                                  "id": "lwvwct4monn34ex6jfe",
+                                  "command": {
+                                    "name": "setSelection",
+                                    "metadata": {},
+                                    "title": "",
+                                    "description": ""
+                                  },
+                                  "actions": []
+                                },
+                                {
+                                  "id": "lwvweiwxy2h789ymlgs",
+                                  "command": {
+                                    "name": "getCurrentSelection",
+                                    "metadata": {},
+                                    "title": "",
+                                    "description": ""
+                                  },
+                                  "actions": [
+                                    {
+                                      "id": "lwvwf16nkzjerfbxbua",
+                                      "command": {
+                                        "name": "setVariable",
+                                        "metadata": {
+                                          "key": "currentComponent",
+                                          "value": "{{this.id}}"
+                                        },
+                                        "title": "",
+                                        "description": ""
+                                      },
+                                      "actions": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "lwvwds5jt5z8ic8026r",
+                                  "command": {
+                                    "name": "removeFromSelection",
+                                    "metadata": {},
+                                    "title": "",
+                                    "description": ""
+                                  },
+                                  "actions": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "lwvvhtofq7wmmy8v4hp",
+                          "command": {
+                            "name": "createFrame",
+                            "metadata": { "layerName": "Detail" },
+                            "title": "",
+                            "description": ""
+                          },
+                          "actions": [
+                            {
+                              "id": "lwvv93smflc1tcbp418",
+                              "command": {
+                                "name": "setAutoLayout",
+                                "metadata": {
+                                  "layoutMode": "VERTICAL",
+                                  "itemSpacing": 10,
+                                  "horizontalSizingMode": "AUTO",
+                                  "verticalSizingMode": "AUTO",
+                                  "horizontalAlignItems": "MIN",
+                                  "verticalAlignItems": "MIN",
+                                  "alignment": "PACKED",
+                                  "paddingLeft": 10,
+                                  "paddingRight": 10,
+                                  "paddingTop": 10,
+                                  "paddingBottom": 10
+                                },
+                                "title": "",
+                                "description": ""
+                              },
+                              "actions": []
+                            },
+                            {
+                              "id": "lwvy8qiws6aj8tasiu8",
+                              "command": {
+                                "name": "createFrame",
+                                "metadata": {
+                                  "layerName": "Codebox",
+                                  "fillColor": [
+                                    {
+                                      "type": "SOLID",
+                                      "color": {
+                                        "r": 0,
+                                        "g": 0,
+                                        "b": 0,
+                                        "a": 1
+                                      }
+                                    }
+                                  ]
+                                },
+                                "title": "",
+                                "description": ""
+                              },
+                              "actions": [
+                                {
+                                  "id": "lwvy97idjiungxxrovh",
+                                  "command": {
+                                    "name": "setAutoLayout",
+                                    "metadata": {
+                                      "layoutMode": "HORIZONTAL",
+                                      "itemSpacing": 10,
+                                      "horizontalSizingMode": "AUTO",
+                                      "verticalSizingMode": "AUTO",
+                                      "horizontalAlignItems": "MIN",
+                                      "verticalAlignItems": "MIN",
+                                      "alignment": "PACKED",
+                                      "paddingLeft": 10,
+                                      "paddingRight": 10,
+                                      "paddingTop": 10,
+                                      "paddingBottom": 10
+                                    },
+                                    "title": "",
+                                    "description": ""
+                                  },
+                                  "actions": []
+                                },
+                                {
+                                  "id": "lwvwgbo2vyov9f588u",
+                                  "command": {
+                                    "name": "setVariable",
+                                    "metadata": {
+                                      "key": "currentComponentDoc",
+                                      "value": "eval(function main() { \n    const tokenBlackList = [\"version\", \"hash\", \"\"];\n\n    function collectTokenUsages(node) {\n        const tokenUsageString = node.getSharedPluginDataKeys(\"tokens\");\n        const tokenUsages = String(tokenUsageString).split(\",\")\n        let tokenUsagesText = \"\";\n\n        const tokenDetailList = [];\n    \n        for (const tokenUsage of tokenUsages) {\n            if (tokenBlackList.includes(tokenUsage)) {\n                continue;\n            }\n\n            const token = node.getSharedPluginData(\"tokens\", tokenUsage);\n            tokenDetailList.push(`${tokenUsage}: ${token}`);\n        }\n\n        if (tokenDetailList.length) {\n            tokenUsagesText += node.name + \"\\n\";\n            tokenUsagesText += \"\\n\";\n            \n            for (const tokenDetail of tokenDetailList) {\n                tokenUsagesText += tokenDetail + \"\\n\";\n            }\n            tokenUsagesText += \"\\n\";\n        }\n\n        if ('children' in node) {\n            for (const child of node.children) {\n                tokenUsagesText += collectTokenUsages(child);\n            }\n        }\n        \n        return tokenUsagesText;\n    }\n\n    const layer = figma.getNodeById(\"{{currentComponent}}\");\n\n    if (!layer) {\n        return \"Node not found.\";\n    }\n\n    return collectTokenUsages(layer);\n}; main())"
+                                    },
+                                    "title": "",
+                                    "description": ""
+                                  },
+                                  "actions": []
+                                },
+                                {
+                                  "id": "lwvv9jemgiwjggxjyvr",
+                                  "command": {
+                                    "name": "createText",
+                                    "metadata": {
+                                      "fontFamily": "JetBrains Mono",
+                                      "fontStyle": "Regular",
+                                      "textAlignHorizontal": "LEFT",
+                                      "textAlignVertical": "CENTER",
+                                      "textDecoration": "NONE",
+                                      "textCase": "ORIGINAL",
+                                      "textAutoResize": "WIDTH_AND_HEIGHT",
+                                      "characters": "{{currentComponentDoc}}",
+                                      "fillColor": [
+                                        {
+                                          "type": "SOLID",
+                                          "color": {
+                                            "r": 255,
+                                            "g": 255,
+                                            "b": 255,
+                                            "a": 1
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "title": "",
+                                    "description": ""
+                                  },
+                                  "actions": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "lwvwbobpgs7d1451fes",
+                      "command": {
+                        "name": "reparent",
+                        "metadata": { "parentID": "{{mainFrameId}}" },
+                        "title": "",
+                        "description": ""
+                      },
+                      "actions": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "createdAt": 1717216564316,
+  "automationWasChanged": true
+}
